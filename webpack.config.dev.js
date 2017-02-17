@@ -59,5 +59,11 @@ export default {
       {test: /\.ico$/, loader: 'file-loader?name=[name].[ext]'},
       {test: /(\.css|\.scss)$/, loaders: ['style-loader', 'css-loader?sourceMap', 'postcss-loader', 'sass-loader?sourceMap']}
     ]
+  },
+  node: {
+    fs: 'empty',
+    console: false,
+    net: 'empty',
+    tls: 'empty'
   }
 };

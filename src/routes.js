@@ -3,9 +3,9 @@ import { Route, IndexRoute } from 'react-router';
 
 import App from './components/App';
 import HomePage from './components/HomePage';
-// eslint-disable-line import/no-named-as-default
 import FuelSavingsPage from './containers/FuelSavingsPage';
 import ItemLayoutPage from './components/ItemLayoutPage';
+// eslint-disable-line import/no-named-as-default
 import AboutPage from './components/AboutPage';
 import NotFoundPage from './components/NotFoundPage';
 
