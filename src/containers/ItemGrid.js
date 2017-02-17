@@ -4,10 +4,11 @@ import {bindActionCreators} from 'redux';
 import * as actions from '../actions/itemActions';
 import ItemGridLayout from '../components/ItemGridLayout';
 
-export const ItemGrid = (props) => {
+const ItemGrid = (props) => {
   return (
     <ItemGridLayout 
-      itemInformation={props.itemInformation} />
+      itemInformation={props.itemInformation}
+      getItems={props.actions.updateItemInfo} />
   );
 };
 
@@ -30,4 +31,4 @@ function mapDispatchToProps(dispatch) {
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(ItemGridLayout);
+)(ItemGrid);

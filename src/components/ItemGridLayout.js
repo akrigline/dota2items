@@ -6,12 +6,16 @@ class ItemGridLayout extends React.Component {
     super(props, context);
   }
 
+  componentDidMount() {
+    this.props.getItems();
+  }
+
   render() {
     const {itemInformation} = this.props;
 
     return (
       <div>
-        {itemInformation.map( 
+        {itemInformation && itemInformation.map( 
           (item, index) => 
           <GridItem item={item} key={index} /> 
         )}
@@ -21,6 +25,7 @@ class ItemGridLayout extends React.Component {
 }
 
 ItemGridLayout.propTypes = {
+  getItems: PropTypes.func.isRequired,
   itemInformation: PropTypes.array.isRequired
 };
 

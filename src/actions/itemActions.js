@@ -11,11 +11,14 @@ function getItemInfo() {
       throw err;
     }
     body = JSON.parse(body);
-    return body.itemdata;
+    let itemData = body.itemdata;
+    itemData = Object.keys(itemData).map(key => itemData[key])
+
+    return itemData;
   }
 }
 
-export function saveItemInfo() {
+export function updateItemInfo() {
   return function (dispatch) {
     return dispatch({
       type: types.SAVE_ITEM_INFO,
