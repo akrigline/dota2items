@@ -1,21 +1,33 @@
-const request = require('request');
+const Dota2Api = require('dota2-api');
+// const request = require('request');
 
 import * as types from '../constants/actionTypes';
+import {API_KEY} from '../constants/config';
 
 function getItemInfo() {
-  const url = "http://www.dota2.com/jsfeed/itemdata?l=english";
-  request(url, handleResponse);
+  const da = Dota2Api.create(API_KEY);
 
-  function handleResponse(err, resp, body) {
-    if (err || resp.statusCode !== 200) {
-      throw err;
+  da.getGameItems().then(
+    (result) => {
+      console.log('result', result);
+      return result;
+    }, (error) => {
+      console.log('error', error);
     }
-    body = JSON.parse(body);
-    let itemData = body.itemdata;
-    itemData = Object.keys(itemData).map(key => itemData[key])
+  )
+  // const url = "http://www.dota2.com/jsfeed/itemdata?l=english";
+  // request(url, handleResponse);
 
-    return itemData;
-  }
+  // function handleResponse(err, resp, body) {
+  //   if (err || resp.statusCode !== 200) {
+  //     throw err;
+  //   }
+  //   body = JSON.parse(body);
+  //   let itemData = body.itemdata;
+  //   itemData = Object.keys(itemData).map(key => itemData[key])
+
+  //   return itemData;
+  // }
 }
 
 export function updateItemInfo() {
