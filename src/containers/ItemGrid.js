@@ -7,18 +7,18 @@ import ItemGridLayout from '../components/ItemGridLayout';
 const ItemGrid = (props) => {
   return (
     <ItemGridLayout 
-      itemInformation={props.itemInformation}
+      itemList={props.itemList}
       getItems={props.actions.updateItemInfo} />
   );
 };
 
 ItemGrid.propTypes = {
-  itemInformation: PropTypes.array.isRequired
+  itemList: PropTypes.array.isRequired
 };
 
 function mapStateToProps(state) {
   return {
-    itemInformation: state.itemInformation
+    itemList: state.itemInformation.itemList
   };
 }
 
