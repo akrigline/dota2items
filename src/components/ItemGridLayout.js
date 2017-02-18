@@ -1,5 +1,6 @@
 import React, {PropTypes} from 'react';
 import GridItem from './GridItem';
+import '../styles/GridLayout.scss';
 
 class ItemGridLayout extends React.Component {
   constructor(props, context) {
@@ -14,7 +15,7 @@ class ItemGridLayout extends React.Component {
     const {itemList} = this.props;
 
     return (
-      <div>
+      <div className="grid-layout">
         {itemList && itemList.map( 
           (item, index) => 
           <GridItem item={item} key={index} /> 

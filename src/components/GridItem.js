@@ -1,6 +1,6 @@
 import React, {PropTypes} from 'react';
 import ReactTooltip from 'react-tooltip';
-import Tooltip from './tooltip';
+import ItemThumb from './ItemThumb';
 
 class GridItem extends React.Component {
   constructor(props, context) {
@@ -9,10 +9,13 @@ class GridItem extends React.Component {
 
   render() {
     const {item} = this.props;
-
+    console.log(item);
     return (
-      <div>
-      </div>
+      <figure>
+        <ItemThumb
+          image={item.img}
+          name={item.dname} />
+      </figure>
     );
   }
 }
