@@ -12,6 +12,6 @@ const ItemThumb = (props) => {
 ItemThumb.propTypes = {
   image: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired
-}
+};
 
 export default ItemThumb;
