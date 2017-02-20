@@ -61,8 +61,8 @@ export const basics = [
     "item_blink"
   ], [
     "item_energy_booster",
-    "item_point_booster",
     "item_vitality_booster",
+    "item_point_booster",
     "item_platemail",
     "item_talisman_of_evasion",
     "item_hyperstone",
@@ -73,4 +73,56 @@ export const basics = [
     "item_eagle",
     "item_relic"
   ] 
-]
+];
+
+export const upgrades = [
+
+];
+
+export const secret = [
+  [ "item_energy_booster",
+    "item_vitality_booster",
+    "item_point_booster",
+    "item_platemail",
+    "item_talisman_of_evasion",
+    "item_hyperstone",
+    "item_ultimate_orb",
+    "item_demon_edge",
+    "item_mystic_staff",
+    "item_reaver",
+    "item_eagle",
+    "item_relic"
+  ]
+];
+
+export const side = [
+  [ "item_tpscroll",
+    "item_magic_stick",
+    "item_orb_of_venom",
+    "item_sobi_mask",
+    "item_ring_of_regen",
+    "item_boots",
+    "item_cloak",
+    "item_ring_of_health",
+    "item_void_stone",
+    "item_lifesteal",
+    "item_helm_of_iron_will",
+    "item_energy_booster",
+    "item_broadsword"
+  ], [
+    "item_slippers",
+    "item_stout_sheild",
+    "item_quelling_blade",
+    "item_blight_stone",
+    "item_blades_of_attack",
+    "item_boots_of_elves",
+    "item_belt_of_strength",
+    "item_robe",
+    "item_gloves",
+    "item_chainmail",
+    "item_bottle",
+    "item_quarterstaff",
+    "item_vitality_booster",
+    "item_blink"
+  ]
+];
