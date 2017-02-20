@@ -11,19 +11,17 @@ class GridItem extends React.Component {
   render() {
     const {item} = this.props;
     return (
-      <figure data-tip data-for={item.id}>
+      <figure data-tip data-for={item.id.toString()}>
         <ItemThumb
           image={item.img}
           name={item.dname} />
 
         <ReactTooltip 
-          id={item.id}
+          id={item.id.toString()}
           place="left" 
           effect="solid"
           class="tooltip-theme">
-          <Tooltip
-            name={item.dname}
-            />
+          <Tooltip {...item} />
         </ReactTooltip>
       </figure>
     );

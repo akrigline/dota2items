@@ -32,6 +32,7 @@
   "license": "MIT",
   "dependencies": {
     "dota2-api": "0.2.1",
+    "dotaconstants": "4.11.0",
     "object-assign": "4.1.0",
     "react": "15.4.1",
     "react-dom": "15.4.1",

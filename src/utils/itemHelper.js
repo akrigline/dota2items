@@ -1,4 +1,6 @@
 import {merge} from 'lodash';
+import items from 'dotaconstants/build/items.json';
+
 
 const removedItems = [
   'cheese_lg.png?3',
@@ -24,8 +26,8 @@ const removedShopItems = [
 ];
 // qual: epic, artifact, component
 export function compileItemArray() {
-  const items = require('../constants/itemData.json');
-  let itemData = items.itemdata;
+
+  let itemData = items;
   itemData = Object.keys(itemData).map(key => itemData[key]);
   itemData = cleanItemData(itemData);
 
@@ -38,6 +40,12 @@ export function compileItemArray() {
 }
 
 function cleanItemData(itemData) {
+  itemData.forEach(
+    (obj) => {
+      obj.img = obj.img.replace('/apps/dota2/images/items/', '');
+      return obj;
+    }
+  );
   let filtered = itemData.filter(
     function(item) {
       return this.indexOf(item.img) < 0;
