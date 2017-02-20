@@ -75,6 +75,7 @@ export const basics = [
   ] 
 ];
 
+// Upgrades Tab of the main shop
 export const upgrades = [
   [ "item_magic_wand",
     "item_null_talisman",
@@ -167,6 +168,7 @@ export const upgrades = [
   ]
 ];
 
+// Secret Shop
 export const secret = [
   [ "item_energy_booster",
     "item_vitality_booster",
@@ -183,6 +185,7 @@ export const secret = [
   ]
 ];
 
+// Side Shop
 export const side = [
   [ "item_tpscroll",
     "item_magic_stick",

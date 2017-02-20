@@ -1,21 +1,23 @@
 import React, {PropTypes} from 'react';
 
-class GridItem extends React.Component {
+class Tooltip extends React.Component {
   constructor(props, context) {
     super(props, context);
   }
 
   render() {
-    const {} = this.props;
+    const {name} = this.props;
 
     return (
       <div>
+        {name}
       </div>
     );
   }
 }
 
-GridItem.propTypes = {
+Tooltip.propTypes = {
+  name: PropTypes.string.isRequired
 };
 
-export default GridItem;
+export default Tooltip;
