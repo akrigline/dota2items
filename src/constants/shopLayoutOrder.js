@@ -76,7 +76,95 @@ export const basics = [
 ];
 
 export const upgrades = [
-
+  [ "item_magic_wand",
+    "item_null_talisman",
+    "item_wraith_band",
+    "item_poor_mans_shield",
+    "item_bracer",
+    "item_soul_ring",
+    "item_phase_boots",
+    "item_power_treads",
+    "item_oblivion_staff",
+    "item_pers",
+    "item_hand_of_midas",
+    "item_travel_boots",
+    "item_moon_shard"
+  ], [
+    "item_ring_of_basilius",
+    "item_iron_talon",
+    "item_headdress",
+    "item_buckler",
+    "item_urn_of_shadows",
+    "item_tranquil_boots",
+    "item_ring_of_aquila",
+    "item_medallion_of_courage",
+    "item_arcane_boots",
+    "item_ancient_janggo",
+    "item_mekansm",
+    "item_vladimir",
+    "item_pipe",
+    "item_guardian_greaves"
+  ], [
+    "item_glimmer_cape",
+    "item_force_staff",
+    "item_veil_of_discord",
+    "item_aether_lens",
+    "item_necronomicon",
+    "item_dagon",
+    "item_cyclone",
+    "item_solar_crest",
+    "item_rod_of_atos",
+    "item_orchid",
+    "item_ultimate_scepter",
+    "item_refresher",
+    "item_sheepstick",
+    "item_octarine"
+  ], [
+    "item_hood_of_defiance",
+    "item_vangaurd",
+    "item_blade_mail",
+    "item_soul_booster",
+    "item_crimson_guard",
+    "item_black_king_bar",
+    "item_lotus_orb",
+    "item_shivas_guard",
+    "item_bloodstone",
+    "item_manta",
+    "item_sphere",
+    "item_hurricane_pike",
+    "item_assault",
+    "item_heart"
+  ], [
+    "item_lesser_crit",
+    "item_armlet",
+    "item_invis_sword",
+    "item_basher",
+    "item_bfury",
+    "item_ethereal_blade",
+    "item_silver_edge",
+    "item_radiance",
+    "item_monkey_king_bar",
+    "item_greater_crit",
+    "item_butterfly",
+    "item_rapier",
+    "item_abyssal_blade",
+    "item_bloodthorn"
+  ], [
+    "item_mask_of_madness",
+    "item_helm_of_the_dominator",
+    "item_dragon_lance",
+    "item_sange",
+    "item_yasha",
+    "item_echo_sabre",
+    "item_maelstrom",
+    "item_diffusal_blade",
+    "item_desolator",
+    "item_heavens_halberd",
+    "item_sange_and_yasha",
+    "item_skadi",
+    "item_mjollnir",
+    "item_satanic"
+  ]
 ];
 
 export const secret = [
