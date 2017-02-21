@@ -12,11 +12,34 @@ class ItemGridLayout extends React.Component {
   }
 
   render() {
-    const {itemList} = this.props;
+    const {itemList, shop} = this.props;
+
+    const filterListBasedOnShop = (shop, itemList) => {
+      if (shop === 'secret') {
+        itemList = itemList.filter((item) => {
+          return item.secret_shop === 1;
+        });
+      } else if (shop === 'side') {
+        itemList = itemList.filter((item) => {
+          return item.side_shop === 1;
+        });
+      } else if (shop === 'basic') {
+        itemList = itemList.filter((item) => {
+          return !item.created;
+        });
+      } else if (shop === 'upgrades') {
+        itemList = itemList.filter((item) => {
+          return item.created;
+        });
+      }
+      return itemList;
+    };
+
+    let filteredList = filterListBasedOnShop(shop, itemList);
 
     return (
       <div className="grid-layout">
-        {itemList && itemList.map( 
+        {filteredList && filteredList.map( 
           (item, index) => 
           <GridItem item={item} key={index} /> 
         )}
@@ -27,7 +50,8 @@ class ItemGridLayout extends React.Component {
 
 ItemGridLayout.propTypes = {
   getItems: PropTypes.func.isRequired,
-  itemList: PropTypes.array.isRequired
+  itemList: PropTypes.array.isRequired,
+  shop: PropTypes.string.isRequired
 };
 
 export default ItemGridLayout;

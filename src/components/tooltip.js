@@ -1,5 +1,6 @@
 import React, {PropTypes} from 'react';
 import ItemThumb from './ItemThumb';
+import '../styles/Tooltip.scss';
 
 class Tooltip extends React.Component {
   constructor(props, context) {
@@ -21,10 +22,11 @@ class Tooltip extends React.Component {
         </header>
         <p dangerouslySetInnerHTML={{ __html: props.desc}} />
         <p dangerouslySetInnerHTML={{ __html: props.attrib}} />
-        <p>{props.cd}</p>
-        <p>{props.mc}</p>
+        <p>Cooldown: {props.cd}</p>
+        <p>Mana Cost: {props.mc}</p>
         {props.secret_shop}
-        <small>{props.lore}</small>
+        {props.side_shop}
+        <blockquote>{props.lore}</blockquote>
       </div>
     );
   }

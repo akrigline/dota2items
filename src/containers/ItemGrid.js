@@ -8,17 +8,20 @@ const ItemGrid = (props) => {
   return (
     <ItemGridLayout 
       itemList={props.itemList}
-      getItems={props.actions.updateItemInfo} />
+      getItems={props.actions.updateItemInfo}
+      shop={props.shop} />
   );
 };
 
 ItemGrid.propTypes = {
-  itemList: PropTypes.array.isRequired
+  itemList: PropTypes.array.isRequired,
+  shop: PropTypes.string.isRequired
 };
 
 function mapStateToProps(state) {
   return {
-    itemList: state.itemInformation.itemList
+    itemList: state.itemInformation.itemList,
+    shop: state.layout.shop
   };
 }
 

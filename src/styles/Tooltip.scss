@@ -1,0 +1,10 @@
+@import "variables";
+
+.tooltip {
+  padding: $gutter-width !important;
+  
+}
+
+.tooltip-content {
+  max-width: 25vw;
+}
