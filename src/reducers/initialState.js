@@ -19,6 +19,6 @@ export default {
     itemList: []
   },
   layout: {
-    shop: 'all'
+    shop: 'basics'
   }
 };

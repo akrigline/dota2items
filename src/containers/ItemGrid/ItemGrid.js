@@ -15,7 +15,12 @@ export const ItemGrid = (props) => {
 
 ItemGrid.propTypes = {
   itemList: PropTypes.array.isRequired,
-  shop: PropTypes.string.isRequired
+  shop: PropTypes.oneOf([
+    'side',
+    'secret',
+    'basics',
+    'upgrades'
+  ])
 };
 
 function mapStateToProps(state) {

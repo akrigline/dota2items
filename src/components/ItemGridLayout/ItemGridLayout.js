@@ -1,6 +1,7 @@
 import React, {PropTypes} from 'react';
 import GridItem from '../GridItem/GridItem';
 import './ItemGridLayout.scss';
+import {basics, upgrades, secret, side} from '../../constants/shopLayoutOrder';
 
 class ItemGridLayout extends React.Component {
   constructor(props, context) {
@@ -14,34 +15,32 @@ class ItemGridLayout extends React.Component {
   render() {
     const {itemList, shop} = this.props;
 
-    const filterListBasedOnShop = (shop, itemList) => {
-      if (shop === 'secret') {
-        itemList = itemList.filter((item) => {
-          return item.secret_shop === 1;
-        });
-      } else if (shop === 'side') {
-        itemList = itemList.filter((item) => {
-          return item.side_shop === 1;
-        });
-      } else if (shop === 'basic') {
-        itemList = itemList.filter((item) => {
-          return !item.created;
-        });
-      } else if (shop === 'upgrades') {
-        itemList = itemList.filter((item) => {
-          return item.created;
-        });
-      }
-      return itemList;
+    const shopLists = {
+      basics,
+      upgrades,
+      secret,
+      side
     };
 
-    let filteredList = filterListBasedOnShop(shop, itemList);
+    const getCorrespondingItem = (itemName) => {
+      const itemFiltered = itemList.filter((item) => {
+        return item.name === itemName;
+      });
+      return itemFiltered[0];
+    };
 
     return (
       <div className="grid-layout">
-        {filteredList && filteredList.map( 
-          (item, index) => 
-          <GridItem item={item} key={index} /> 
+        {shopLists[shop].map(
+          (column, index) =>
+            <div className="grid-column" key={index}>
+              {column.map(
+                (entry, index) => {
+                  const correspondingItem = getCorrespondingItem(entry);
+                  return correspondingItem && <GridItem item={correspondingItem} key={index} />;
+                }
+              )}
+            </div>
         )}
       </div>
     );
