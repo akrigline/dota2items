@@ -1,7 +1,7 @@
 import React from 'react';
 import {shallow} from 'enzyme';
 import ItemLayoutPage from './ItemLayoutPage';
-import ItemGrid from '../containers/ItemGrid';
+import ItemGrid from '../../containers/ItemGrid/ItemGrid';
 
 describe('<ItemLayoutPage />', () => {
   it('should have a header called \'Items\'', () => {

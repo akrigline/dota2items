@@ -1,17 +1,18 @@
 import React from 'react';
 import {shallow} from 'enzyme';
-import {FuelSavingsPage} from './FuelSavingsPage';
-import FuelSavingsForm from '../components/FuelSavingsForm';
+import {ItemGrid} from './ItemGrid';
+import ItemGridLayout from '../../components/ItemGridLayout/ItemGridLayout';
 
-describe('<FuelSavingsPage />', () => {
-  it('should contain <FuelSavingsForm />', () => {
+describe('<ItemGrid />', () => {
+  it('should contain <ItemGridLayout />', () => {
     const actions = {
-      saveFuelSavings: () => { },
-      calculateFuelSavings: () => { }
+      updateItemInfo: () => { },
     };
-    const fuelSavings = {};
-    const wrapper = shallow(<FuelSavingsPage actions={actions} fuelSavings={fuelSavings}/>);
+    const itemList = [];
+    const shop = '';
 
-    expect(wrapper.find(FuelSavingsForm).length).toEqual(1);
+    const wrapper = shallow(<ItemGrid actions={actions} itemList={itemList} shop={shop} />);
+
+    expect(wrapper.find(ItemGridLayout).length).toEqual(1);
   });
 });

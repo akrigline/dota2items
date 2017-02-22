@@ -2,8 +2,8 @@ import React from 'react';
 import {shallow} from 'enzyme';
 import ReactToolTip from 'react-tooltip';
 import GridItem from './GridItem';
-import ItemThumb from './ItemThumb';
-import Tooltip from './Tooltip';
+import Tooltip from '../Tooltip/Tooltip';
+import ItemThumb from '../ItemThumb/ItemThumb';
 
 describe('<GridItem />', () => {
   const demoItem = {

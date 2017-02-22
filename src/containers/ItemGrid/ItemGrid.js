@@ -4,7 +4,7 @@ import {bindActionCreators} from 'redux';
 import * as actions from '../../actions/itemActions';
 import ItemGridLayout from '../../components/ItemGridLayout/ItemGridLayout';
 
-const ItemGrid = (props) => {
+export const ItemGrid = (props) => {
   return (
     <ItemGridLayout 
       itemList={props.itemList}
