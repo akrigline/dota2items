@@ -1,8 +1,8 @@
 import React, {PropTypes} from 'react';
 import ReactTooltip from 'react-tooltip';
-import Tooltip from './Tooltip';
-import ItemThumb from './ItemThumb';
-import '../styles/GridItem.scss';
+import Tooltip from '../Tooltip/Tooltip';
+import ItemThumb from '../ItemThumb/ItemThumb';
+import './GridItem.scss';
 
 class GridItem extends React.Component {
   constructor(props, context) {

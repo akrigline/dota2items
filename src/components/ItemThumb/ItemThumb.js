@@ -4,7 +4,7 @@ import React, {PropTypes} from 'react';
 const ItemThumb = (props) => {
   return (
     <img
-      src={`../resources/images/${props.image}`}
+      src={`../../resources/images/${props.image}`}
       alt={props.name} />
   );
 };

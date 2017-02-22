@@ -1,6 +1,6 @@
 import React, {PropTypes} from 'react';
-import GridItem from './GridItem';
-import '../styles/GridLayout.scss';
+import GridItem from '../GridItem/GridItem';
+import './ItemGridLayout.scss';
 
 class ItemGridLayout extends React.Component {
   constructor(props, context) {

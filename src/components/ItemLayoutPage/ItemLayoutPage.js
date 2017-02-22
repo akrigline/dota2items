@@ -1,6 +1,5 @@
 import React from 'react';
-import ItemGrid from '../containers/ItemGrid';
-import '../styles/about-page.css';
+import ItemGrid from '../../containers/ItemGrid/ItemGrid';
 
 // Since this component is simple and static, there's no parent container for it.
 const ItemLayoutPage = () => {

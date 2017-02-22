@@ -1,6 +1,6 @@
 import React, {PropTypes} from 'react';
-import ItemThumb from './ItemThumb';
-import '../styles/Tooltip.scss';
+import ItemThumb from '../ItemThumb/ItemThumb';
+import './Tooltip.scss';
 
 class Tooltip extends React.Component {
   constructor(props, context) {
