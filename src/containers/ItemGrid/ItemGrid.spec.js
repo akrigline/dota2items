@@ -9,7 +9,7 @@ describe('<ItemGrid />', () => {
       updateItemInfo: () => { },
     };
     const itemList = [];
-    const shop = '';
+    const shop = 'basics';
 
     const wrapper = shallow(<ItemGrid actions={actions} itemList={itemList} shop={shop} />);
 

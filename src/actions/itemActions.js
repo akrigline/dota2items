@@ -8,3 +8,10 @@ export function updateItemInfo() {
     itemInfo: compileItemArray()
   };
 }
+
+export function changeShop(payload) {
+  return {
+    type: types.CHANGE_SHOP,
+    shop: payload
+  };
+}
