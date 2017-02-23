@@ -102,7 +102,7 @@ export const upgrades = [
     "item_arcane_boots",
     "item_ancient_janggo",
     "item_mekansm",
-    "item_vladimir",
+    "item_vladmir",
     "item_pipe",
     "item_guardian_greaves"
   ], [
@@ -119,10 +119,10 @@ export const upgrades = [
     "item_ultimate_scepter",
     "item_refresher",
     "item_sheepstick",
-    "item_octarine"
+    "item_octarine_core"
   ], [
     "item_hood_of_defiance",
-    "item_vangaurd",
+    "item_vanguard",
     "item_blade_mail",
     "item_soul_booster",
     "item_crimson_guard",
@@ -202,7 +202,7 @@ export const side = [
     "item_broadsword"
   ], [
     "item_slippers",
-    "item_stout_sheild",
+    "item_stout_shield",
     "item_quelling_blade",
     "item_blight_stone",
     "item_blades_of_attack",
