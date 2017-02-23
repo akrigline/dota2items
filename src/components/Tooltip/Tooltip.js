@@ -10,6 +10,10 @@ class Tooltip extends React.Component {
   render() {
     const props = this.props;
 
+    const coins = require('../../resources/icons/gold.png');
+    const cooldown = require('../../resources/icons/cooldown.png');
+    const mana = require('../../resources/icons/mana.png');
+
     return (
       <div className="tooltip-content">
         <header>
@@ -19,13 +23,13 @@ class Tooltip extends React.Component {
             name={props.dname} />
           <div className="tooltip-header">
             <h2>{props.dname}</h2>
-            <h3>{props.cost}</h3>
+            <h3><img src={coins} alt="Cost" /> {props.cost}</h3>
           </div>
         </header>
         <p dangerouslySetInnerHTML={{ __html: props.desc}} />
         <p dangerouslySetInnerHTML={{ __html: props.attrib}} />
-        {props.cd && <p>Cooldown: {props.cd}</p>}
-        {props.mc && <p>Mana Cost: {props.mc}</p>}
+        {props.cd && <p><img src={cooldown} alt="Cooldown" /> {props.cd}</p>}
+        {props.mc && <p><img src={mana} alt="Mana Cost" /> {props.mc}</p>}
         {!!props.secret_shop && 'Secret Shop'}
         {!!props.side_shop && 'Side Shop'}
         <blockquote>{props.lore}</blockquote>

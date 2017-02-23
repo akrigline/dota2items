@@ -7,6 +7,11 @@
   header {
     display: flex;
   }
+
+  img {
+    display: inline-block;
+    vertical-align: middle;
+  }
 }
 
 .tooltip-header {
