@@ -1,5 +1,5 @@
 import {merge} from 'lodash';
-import items from 'dotaconstants/build/items.json';
+import items from 'dotaconstants/build/items';
 
 
 const removedItems = [

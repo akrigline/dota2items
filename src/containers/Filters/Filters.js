@@ -13,6 +13,7 @@ export const Filters = (props) => {
 };
 
 Filters.propTypes = {
+  actions: PropTypes.object.isRequired,
   shop: PropTypes.oneOf([
     'side',
     'secret',

@@ -14,6 +14,7 @@ export const ItemGrid = (props) => {
 };
 
 ItemGrid.propTypes = {
+  actions: PropTypes.object.isRequired,
   itemList: PropTypes.array.isRequired,
   shop: PropTypes.oneOf([
     'side',
