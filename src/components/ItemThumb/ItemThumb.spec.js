@@ -19,7 +19,7 @@ describe('<ItemThumb />', () => {
   it('should have a src of a modified props.image', () => {
     const wrapper = shallow(<ItemThumb {...props} />);
     const actual = wrapper.prop('src');
-    const expected = `../resources/images/${props.image}`;
+    const expected = `../../resources/images/${props.image}`;
 
     expect(actual).toEqual(expected);
   });
