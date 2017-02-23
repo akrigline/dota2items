@@ -17,16 +17,17 @@ class Tooltip extends React.Component {
             size="small"
             image={props.img}
             name={props.dname} />
-
-          <h2>{props.dname}</h2>
-          <h3>{props.cost}</h3>
+          <div className="tooltip-header">
+            <h2>{props.dname}</h2>
+            <h3>{props.cost}</h3>
+          </div>
         </header>
         <p dangerouslySetInnerHTML={{ __html: props.desc}} />
         <p dangerouslySetInnerHTML={{ __html: props.attrib}} />
-        <p>Cooldown: {props.cd}</p>
-        <p>Mana Cost: {props.mc}</p>
-        {props.secret_shop}
-        {props.side_shop}
+        {props.cd && <p>Cooldown: {props.cd}</p>}
+        {props.mc && <p>Mana Cost: {props.mc}</p>}
+        {!!props.secret_shop && 'Secret Shop'}
+        {!!props.side_shop && 'Side Shop'}
         <blockquote>{props.lore}</blockquote>
       </div>
     );

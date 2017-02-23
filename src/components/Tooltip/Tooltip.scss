@@ -3,6 +3,18 @@
 .tooltip {
   padding: $gutter-width !important;
   background: linear-gradient(to bottom, rgb(75, 75, 75) 0%,rgb(24, 24, 24) 100%);
+
+  header {
+    display: flex;
+  }
+}
+
+.tooltip-header {
+  flex-grow: 1;
+  margin-left: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .tooltip-content {

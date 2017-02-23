@@ -5,7 +5,8 @@ import ItemThumb from './ItemThumb';
 describe('<ItemThumb />', () => {
   const props = {
     image: "hood_of_defiance_lg.png?3",
-    name: "Hood of Defiance"
+    name: "Hood of Defiance",
+    size: "normal"
   };
 
   it('should be an <div />', () => {
@@ -19,7 +20,7 @@ describe('<ItemThumb />', () => {
   it('should have a class name of "item-thumb-wrapper"', () => {
     const wrapper = shallow(<ItemThumb {...props} />);
     const actual = wrapper.prop('className');
-    const expected = 'item-thumb-wrapper';
+    const expected = `item-thumb-wrapper ${props.size}-thumb`;
 
     expect(actual).toEqual(expected);
   });
