@@ -10,7 +10,7 @@ class FilterList extends React.Component {
     const props = this.props;
 
     return (
-      <div className="grid-layout">
+      <div>
         <button onClick={() => props.changeShop('side')}>Side Shop</button>
         <button onClick={() => props.changeShop('secret')}>Secret Shop</button>
         <button onClick={() => props.changeShop('basics')}>Basics</button>

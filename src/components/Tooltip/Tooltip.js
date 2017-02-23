@@ -14,6 +14,7 @@ class Tooltip extends React.Component {
       <div className="tooltip-content">
         <header>
           <ItemThumb
+            size="small"
             image={props.img}
             name={props.dname} />
 

@@ -14,6 +14,7 @@ class GridItem extends React.Component {
     return (
       <figure className="grid-item" data-tip data-for={item.id.toString()}>
         <ItemThumb
+          size="normal"
           image={item.img}
           name={item.dname} />
 
