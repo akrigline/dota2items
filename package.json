@@ -2,6 +2,7 @@
   "name": "dota2-items",
   "version": "0.1.0",
   "description": "This is a project to preset the items in Dota 2 in a more easily digestable way.",
+  "homepage": "https://akrigline.github.io/dota2items",
   "engines": {
     "npm": ">=3"
   },
@@ -20,6 +21,8 @@
     "remove-dist": "rimraf ./dist",
     "prebuild": "npm run clean-dist && npm run lint && npm run test",
     "build": "babel-node tools/build.js && npm run open:dist",
+    "predeploy": "npm run prebuild && babel-node tools/build.js",
+    "deploy": "gh-pages -d dist",
     "test": "jest",
     "test:CI": "node --harmony_proxies node_modules/jest/bin/jest",
     "test:cover": "npm run test -- --coverage ",
