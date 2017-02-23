@@ -2,7 +2,7 @@
 
 .tooltip {
   padding: $gutter-width !important;
-  
+  background: linear-gradient(to bottom, rgb(75, 75, 75) 0%,rgb(24, 24, 24) 100%);
 }
 
 .tooltip-content {

@@ -1,5 +1,8 @@
 @import "../../styles/variables";
 
 .grid-item {
-  margin: $gutter-width / 2; 
+  margin: $gutter-width / 4;
+  border-radius: 3px;
+  overflow: hidden;
+  border: 1px solid rgb(242, 186, 0);
 }

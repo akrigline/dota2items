@@ -3,8 +3,11 @@
 .grid-layout {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .grid-column {
   width: 4em;
+  display: flex;
+  flex-direction: column;
 }
