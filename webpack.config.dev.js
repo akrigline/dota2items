@@ -37,15 +37,7 @@ export default {
       inject: true
     }),
     new CopyWebpackPlugin([
-      // Copy glob results to /absolute/path/
       { from: './src/images/**/*', to: './images', flatten: true },
-
-      // // Copy glob results, relative to context
-      // {
-      //     context: 'src/components/ItemThumb/images/',
-      //     from: '**/*',
-      //     to: '/images'
-      // }
     ]),
     new webpack.LoaderOptionsPlugin({
       minimize: false,
