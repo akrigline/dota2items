@@ -6,12 +6,24 @@
 
   header {
     display: flex;
+
+    h3 {
+      color: $color-cost;
+    }
   }
 
   img {
     display: inline-block;
     vertical-align: middle;
   }
+}
+
+.attribVal {
+  color: $color-gold;
+}
+
+.attribValText {
+  font-weight: 700;
 }
 
 .tooltip-header {
